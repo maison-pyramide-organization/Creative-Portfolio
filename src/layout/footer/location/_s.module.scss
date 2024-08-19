@@ -1,1 +1,16 @@
-//
+.location {
+}
+
+.location > div {
+  display: flex;
+  gap: 8px;
+}
+
+.location svg {
+  width: 14px;
+  aspect-ratio: 1;
+}
+
+.location .email {
+  display: none;
+}

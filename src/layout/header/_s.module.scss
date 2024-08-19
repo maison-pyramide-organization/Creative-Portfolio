@@ -1,1 +1,24 @@
-//
+.h {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 20px;
+}
+
+.logo span {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.h nav {
+  display: none;
+}
+
+.h .contact {
+  display: none;
+}
+
+.h button {
+  font-size: 14px;
+  font-weight: 500;
+}
