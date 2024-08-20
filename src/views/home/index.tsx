@@ -6,6 +6,10 @@ import { Service } from "./components/service";
 import VMob from "@a/images/v-mob.png";
 // @ts-ignore
 import MPCP from "@a/icons/mpcp-logo.svg?react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import projects from "@/data/projects";
+import FeaturedProject from "./components/f-project";
+import "swiper/css";
 
 const Home = () => {
     useEffect(() => {
@@ -19,22 +23,29 @@ const Home = () => {
             <div className={s["logo"]}>
                 <MPCP />
             </div>
-            <div>
-                <section className={s["s-intro"]}>
-                    <h1>
-                        WE HELP BUILDING EARLY-STAGE COMPANIES AND ACCELERATING LATER STAGE BRANDS.
-                    </h1>
-                    <div>
-                        <img src={VMob} alt="" />
-                    </div>
-                </section>
-                <section className={s["s-services"]}>
-                    <h2>SERVICES</h2>
-                    {services.map((service) => (
-                        <Service service={service} key={service.index} />
+
+            <section className={s["s-f-projects"]}>
+                <Swiper slidesPerView={"auto"} spaceBetween={24} centeredSlides={true} loop={true}>
+                    {projects.map((project, i) => (
+                        <SwiperSlide key={i}>
+                            <FeaturedProject project={project} />
+                        </SwiperSlide>
                     ))}
-                </section>
-            </div>
+                </Swiper>
+            </section>
+
+            <section className={s["s-intro"]}>
+                <h1>WE HELP BUILDING EARLY-STAGE COMPANIES AND ACCELERATING LATER STAGE BRANDS.</h1>
+                <div>
+                    <img src={VMob} alt="" />
+                </div>
+            </section>
+            <section className={s["s-services"]}>
+                <h2>SERVICES</h2>
+                {services.map((service) => (
+                    <Service service={service} key={service.index} />
+                ))}
+            </section>
         </div>
     );
 };
