@@ -1,8 +1,31 @@
 //
 .s-contact {
+    position: relative;
+    padding-block: 80px 160px;
+    color: white;
     background-color: black;
 }
-.pyramide-pattern {
+.s-contact h2 {
+    padding-inline: 20px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.s-contact button {
+    font-size: 12px;
+    border-radius: 100px;
     background-color: white;
-    clip-path: polygon(80% 80%, 0% 100%, 100% 100%);
+    padding: 10px 24px;
+    margin-inline: auto;
+    margin-top: 40px;
+}
+
+.pyramide {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    height: 80px;
+    background-color: white;
+    clip-path: polygon(80% 0, 0% 100%, 100% 100%);
 }

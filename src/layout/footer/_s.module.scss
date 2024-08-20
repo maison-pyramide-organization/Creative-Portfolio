@@ -1,49 +1,49 @@
 .f {
-  padding-block: 48px 24px;
-  padding-inline: 20px;
+    padding-block: 48px 24px;
+    padding-inline: 20px;
 }
 
 .f > ul {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
 .contact,
 .positions {
-  margin-top: 40px;
-  span {
-    font-size: 14px;
-  }
-  button {
-    font-size: 10px;
-    padding: 8px 24px;
-    font-weight: 500;
-    background-color: #cee0a6;
-    border-radius: 50px;
-    margin-top: 16px;
-  }
+    margin-top: 40px;
+    span {
+        font-size: 14px;
+    }
+    button {
+        font-size: 12px;
+        padding: 8px 24px;
+        font-weight: 500;
+        background-color: #cee0a6;
+        border-radius: 50px;
+        margin-top: 16px;
+    }
 }
 
 .socials {
-  margin-top: 48px;
+    margin-top: 48px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 8px;
 }
-.socials > div {
-  display: flex;
-  gap: 8px;
-  justify-content: center;
-  align-items: center;
-  font-size: 10px;
-}
-.socials .seprator {
-  display: block;
-  width: 1px;
-  height: 10px;
-  background-color: black;
+.socials a {
+    flex-basis: 50%;
+    padding-inline: 16px;
+    font-size: 12px;
+    &:nth-child(2n - 1) {
+        text-align: right;
+        border-right: 1px solid black;
+    }
 }
 
 .cr {
-  margin-top: 24px;
-  font-size: 10px;
-  text-align: center;
+    margin-top: 24px;
+    font-size: 12px;
+    text-align: center;
 }

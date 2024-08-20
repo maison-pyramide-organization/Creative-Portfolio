@@ -1,14 +1,4 @@
-/* FONTS */
-@font-face {
-  font-family: "Suisse";
-  font-style: normal;
-  font-weight: 400;
-  src: url("../../fonts/SuisseIntl-Regular.otf") format("opentype");
-}
-
-@font-face {
-  font-family: "Suisse";
-  font-style: normal;
-  font-weight: 500;
-  src: url("../../fonts//SuisseIntl-Medium.otf") format("opentype");
+//
+.p {
+    padding-block: 64px 40px;
 }

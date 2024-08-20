@@ -1,12 +1,32 @@
+/* FONTS */
+@font-face {
+  font-family: "Suisse";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../../fonts/SuisseIntl-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Suisse";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../../fonts//SuisseIntl-Medium.otf") format("opentype");
+}
+
 /*
 * THIS FILES IS FOR RESETTING SOME OF THE DEFAULTS STYLES
 */
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "suisse", sans-serif;
+}
+body{
+  overscroll-behavior: none;
+}
+h1,h2,h3,h4,h5{
+  font-weight: 500;
 }
 a {
   text-decoration: none;
@@ -20,6 +40,7 @@ button {
   background-color: transparent;
   display: block;
   border: none;
+  font-weight: 500;
 }
 img,
 video {

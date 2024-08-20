@@ -1,16 +1,30 @@
 .location {
+    display: flex;
+    gap: 8px;
 }
-
-.location > div {
-  display: flex;
-  gap: 8px;
+.location span{
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 16px;
 }
 
 .location svg {
-  width: 14px;
-  aspect-ratio: 1;
+    width: 14px;
+    aspect-ratio: 1;
+    transition: all 0.3s linear;
+}
+:global(.active) .location svg {
+    transform: rotate(180deg);
 }
 
-.location .email {
-  display: none;
+.email {
+    margin-left: calc(14px + 8px);
+    margin-top: 8px;
+    transition: all 0.3s linear;
+    max-height: 0;
+    overflow: hidden;
+}
+
+:global(.active) .email {
+    max-height: 100px;
 }

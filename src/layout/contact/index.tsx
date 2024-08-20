@@ -8,7 +8,7 @@ const Contact = () => {
                 MIND.
             </h2>
             <button>BECOME AN MP CLIENT</button>
-            <div className={s["pyramide-pattern"]} />
+            <div className={s["pyramide"]} />
         </section>
     );
 };

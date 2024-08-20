@@ -1,10 +1,34 @@
+.logo svg {
+    width: 250px;
+    margin-inline: auto;
+}
+.s-intro {
+    padding-inline: 20px;
+    padding-block: 40px;
+
+    h1 {
+        font-size: 20px;
+        text-align: center;
+        line-height: 120%;
+        letter-spacing: -1%;
+    }
+    div {
+        margin-top: 48px;
+    }
+    img {
+        width: 100%;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+}
+
 //
 .s-services {
-  padding-inline: 20px;
+    padding-inline: 20px;
+    padding-block: 40px;
 
-  h2 {
-    font-size: 20;
-    font-weight: 500;
-    margin-bottom: 32px;
-  }
+    h2 {
+        font-size: 20px;
+        margin-bottom: 32px;
+    }
 }

@@ -7,14 +7,14 @@ import App from "./App.tsx";
 import Grid from "@c/grid/index.tsx";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
-  <>
-    <React.StrictMode>
-      <Grid />
-      <ReactLenis root>
-        <BrowserRouter>
-          <App />
-        </BrowserRouter>
-      </ReactLenis>
-    </React.StrictMode>
-  </>
+    <>
+        <React.StrictMode>
+            <Grid />
+            <ReactLenis root>
+                <BrowserRouter>
+                    <App />
+                </BrowserRouter>
+            </ReactLenis>
+        </React.StrictMode>
+    </>
 );
