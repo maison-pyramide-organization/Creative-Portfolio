@@ -1,0 +1,61 @@
+.p {
+  padding-inline: 20px;
+}
+.title {
+  font-size: 24px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.thumbnail {
+  margin-top: 48px;
+  width: 100%;
+}
+
+.p h3 {
+  font-size: 16px;
+}
+
+.info {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.info div {
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.client {
+  grid-area: 1/1/1/2;
+}
+.year {
+  grid-area: 1/2/1/3;
+}
+.services {
+  grid-area: 2/1/3/3;
+}
+.intro {
+  grid-area: 3/1/3/3;
+}
+
+.services ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+.services li {
+  padding-inline: 8px;
+  border-left: 1px solid black;
+  &:first-child {
+    padding-left: 0px;
+    border-left: none;
+  }
+}
+
+.collage {
+  margin-top: 40px;
+}
