@@ -1,14 +1,17 @@
-import { useEffect, useState } from "react";
 import s from "./_s.module.scss";
-import { useLocation } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import Menu from "../menu";
 
 const Header = () => {
-    const { pathname } = useLocation();
+    const { pathname, hash } = useLocation();
+    const [isMenuOpened, setIsMenuOpened] = useState(false);
+
     useEffect(() => {
         setIsMenuOpened(false);
-    }, [pathname]);
-    const [isMenuOpened, setIsMenuOpened] = useState(false);
+        document.getElementById("root")?.classList.remove("menu-opened");
+    }, [pathname, hash]);
+
     const toggleMenu = () => {
         setIsMenuOpened((prev) => !prev);
         document.getElementById("root")?.classList.toggle("menu-opened");
@@ -21,14 +24,16 @@ const Header = () => {
                     <span>MAISON PYRAMIDE</span>
                 </div>
                 <nav>
-                    <div>home</div>
-                    <div>projects</div>
-                    <div>services</div>
+                    <Link to="/">HOME</Link>
+                    <Link to="/projects">PROJECTS</Link>
+                    <Link to="/#services">SERVICES</Link>
                 </nav>
-                <div className={s.contact}>
-                    <button>contact</button>
+
+                <button className={s["contact"]}>CONTACT</button>
+
+                <div className={s["menu"]} onClick={toggleMenu}>
+                    {isMenuOpened ? "CLOSE" : "MENU"}
                 </div>
-                <button onClick={toggleMenu}>{isMenuOpened ? "CLOSE" : "MENU"}</button>
             </header>
 
             {isMenuOpened && <Menu />}

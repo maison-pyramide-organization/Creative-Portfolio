@@ -1,3 +1,5 @@
+@use "@a/styles/base" as *;
+
 :global(.menu-opened) .h {
     color: white;
 }
@@ -6,7 +8,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 24px 20px;
+    padding: 24px 20px 0;
     position: relative;
     z-index: 9999;
 }
@@ -18,14 +20,30 @@
 
 .h nav {
     display: none;
+    font-size: 16px;
+    @media (--lg) {
+        display: flex;
+        gap: 40px;
+    }
 }
 
-.h .contact {
+.contact {
     display: none;
+    font-size: 14px;
+    padding: 8px 24px;
+    border: 1px solid black;
+    border-radius: 50px;
+
+    @media (--lg) {
+        display: block;
+    }
 }
 
-.h button {
+.menu {
     font-size: 16px;
     font-weight: 500;
     color: inherit;
+    @media (--lg) {
+        display: none;
+    }
 }

@@ -1,5 +1,5 @@
-import { useState } from "react";
 import s from "./_s.module.scss";
+import { useState } from "react";
 // @ts-ignore
 import I_Chevron from "@a/icons/chevron.svg?react";
 

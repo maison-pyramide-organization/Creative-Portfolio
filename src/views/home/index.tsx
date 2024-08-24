@@ -10,12 +10,23 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import projects from "@/data/projects";
 import FeaturedProject from "./components/f-project";
 import "swiper/css";
+import { useLocation } from "react-router-dom";
 
 const Home = () => {
+    let { hash } = useLocation();
     useEffect(() => {
-        getProjects().then((projects) => {
-            console.log(projects);
-        });
+        // Scroll to an anchor section
+        if (hash) {
+            hash = hash.slice(1);
+            const section = document.getElementById(hash);
+            if (section) {
+                section.scrollIntoView({ behavior: "smooth", block: "start" });
+            }
+        }
+
+        // getProjects().then((projects) => {
+        //     console.log(projects);
+        // });
     }, []);
 
     return (
@@ -27,7 +38,7 @@ const Home = () => {
             <section className={s["s-f-projects"]}>
                 <Swiper slidesPerView={"auto"} spaceBetween={24} centeredSlides={true} loop={true}>
                     {projects.map((project, i) => (
-                        <SwiperSlide key={i}>
+                        <SwiperSlide key={i} className={s["slide"]}>
                             <FeaturedProject project={project} />
                         </SwiperSlide>
                     ))}
@@ -40,7 +51,7 @@ const Home = () => {
                     <img src={VMob} alt="" />
                 </div>
             </section>
-            <section className={s["s-services"]}>
+            <section id="services" className={s["s-services"]}>
                 <h2>SERVICES</h2>
                 {services.map((service) => (
                     <Service service={service} key={service.index} />

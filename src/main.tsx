@@ -5,6 +5,7 @@ import { ReactLenis } from "@studio-freight/react-lenis";
 import "@s/global/index.scss";
 import App from "./App.tsx";
 import Grid from "@c/grid/index.tsx";
+import ViewportProvider from "./context/viewport-context.tsx";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
     <>
@@ -12,7 +13,9 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
             <Grid />
             <ReactLenis root>
                 <BrowserRouter>
-                    <App />
+                    <ViewportProvider>
+                        <App />
+                    </ViewportProvider>
                 </BrowserRouter>
             </ReactLenis>
         </React.StrictMode>

@@ -1,4 +1,7 @@
+@use '@a/styles/base' as *;
+
 .proj {
+    display: block;
     width: 300px;
 }
 .proj img {
@@ -11,6 +14,7 @@
     transition: opacity 0.3s linear;
     opacity: 1;
 }
+
 .proj div {
     opacity: 0;
     margin-top: 16px;
@@ -18,10 +22,10 @@
     justify-content: space-between;
     align-items: center;
     h3 {
-        font-size: 16px;
+        font-size: $fs2;
         text-transform: capitalize;
     }
     span {
-        font-size: 12px;
+        font-size: $fs1;
     }
 }

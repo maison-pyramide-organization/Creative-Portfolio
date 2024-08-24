@@ -25,10 +25,18 @@ const Footer = () => {
             </div>
 
             <div className={s["socials"]}>
-                <a href={socials.ig}>INSTAGRAM</a>
-                <a href={socials.ig}>LINKEDIN</a>
-                <a href={socials.ig}>E-SHOWROOM</a>
-                <a href={socials.ig}>EGO & EAST</a>
+                <a href={socials.ig} target="_blank">
+                    INSTAGRAM
+                </a>
+                <a href={socials.ig} target="_blank">
+                    LINKEDIN
+                </a>
+                <a href={socials.ig} target="_blank">
+                    E-SHOWROOM
+                </a>
+                <a href={socials.ig} target="_blank">
+                    EGO & EAST
+                </a>
             </div>
 
             <div className={s.cr}>2024 ALL RIGHTS RESERVED</div>

@@ -1,3 +1,5 @@
+@use "@a/styles/base" as *;
+
 //
 .s-contact {
     position: relative;
@@ -7,14 +9,14 @@
 }
 .s-contact h2 {
     padding-inline: 20px;
-    font-size: 20px;
+    font-size: $fs3;
     text-align: center;
 }
 
 .s-contact button {
-    font-size: 12px;
+    font-size: $fs1;
     border-radius: 100px;
-    background-color: white;
+    background-color: $mp-green;
     padding: 10px 24px;
     margin-inline: auto;
     margin-top: 40px;

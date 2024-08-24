@@ -1,3 +1,5 @@
+@use "@a/styles/base" as *;
+
 //
 .menu {
     width: 100%;
@@ -26,16 +28,17 @@
 
 .menu ul a {
     display: block;
-    font-size: 16px;
+    font-size: $fs2;
     padding-block: 24px;
 }
 
 .menu button {
-    margin-top: 40px;
+    margin-top: 80px;
     padding: 10px 24px;
     background-color: #cee0a6;
     width: 100%;
     border-radius: 200px;
+    font-size: $fs1;
 }
 
 .menu_b {
@@ -53,7 +56,7 @@
 .social a {
     flex-basis: 50%;
     padding-inline: 16px;
-    font-size: 12px;
+    font-size: $fs1;
     &:nth-child(2n - 1) {
         text-align: right;
         border-right: 1px solid white;
@@ -62,6 +65,6 @@
 
 .cr {
     margin-top: 24px;
-    font-size: 12px;
+    font-size: $fs1;
     text-align: center;
 }

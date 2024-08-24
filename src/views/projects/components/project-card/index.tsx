@@ -1,22 +1,26 @@
 import s from "./_s.module.scss";
+import { Link } from "react-router-dom";
 
 interface Iprops {
-  project: any;
+    project: any;
 }
 
 const ProjectCard = (props: Iprops) => {
-  const { name, thumbnail, year, services } = props.project;
-  return (
-    <div className={s.project}>
-      <img src={thumbnail} alt="" />
-      <h3>{name}</h3>
-      <ul>
+    const { name, thumbnail, year, services, slug } = props.project;
+    return (
+        <Link to={`/projects/${slug}`} >
+            <img src={thumbnail} alt="" />
+            <div className={s["info"]}>
+                <h3>{name}</h3>
+                <div>{services[0]}</div>
+                <div>({year})</div>
+            </div>
+            {/* <ul>
         {services.map((service, i) => (
           <li key={i}>{service}</li>
         ))}
-      </ul>
-      <div className={s.year}>({year})</div>
-    </div>
-  );
+      </ul> */}
+        </Link>
+    );
 };
 export default ProjectCard;

@@ -1,14 +1,26 @@
-.p_w {
-  padding-inline: 20px;
+@use "@a/styles/base" as *;
+
+.p {
+    padding-inline: 20px;
 }
 
-.heading {
-  font-size: 20px;
+.p h1 {
+    font-size: $fs4;
 }
 
 .projects {
-  margin-top: 48px;
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+}
+
+@media (--md) {
+    .p h1 {
+        font-size: 44px;
+    }
+    .projects {
+        grid-template-columns: 1fr 1fr;
+        row-gap: 80px;
+    }
 }

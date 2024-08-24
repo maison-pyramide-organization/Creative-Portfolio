@@ -1,11 +1,13 @@
+@use "@a/styles/base" as *;
+
 .location {
     display: flex;
     gap: 8px;
 }
-.location span{
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 16px;
+.location span {
+    text-transform: uppercase;
+    font-size: $fs2;
+    font-weight: 500;
 }
 
 .location svg {
@@ -18,6 +20,7 @@
 }
 
 .email {
+    font-size: $fs2;
     margin-left: calc(14px + 8px);
     margin-top: 8px;
     transition: all 0.3s linear;

@@ -1,7 +1,15 @@
 //
 .p-w {
-  padding-block: 40px;
+    padding-block: 80px;
 }
-.swiper-slide {
-  width: unset !important;
+.menu-opened {
+    height: 100vh;
+    height: 100dvh;
+    overflow: hidden;
+}
+
+@media (--md) {
+    .p-w {
+        padding-block: 100px;
+    }
 }
