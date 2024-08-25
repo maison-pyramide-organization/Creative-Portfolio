@@ -41,11 +41,11 @@
 
 .f-t {
     span {
-        font-size: $fs2;
+        font-size: 16rem;
         font-weight: 500;
     }
     button {
-        font-size: $fs1;
+        font-size: 12rem;
         padding: 8rem 24rem;
         font-weight: 500;
         background-color: #cee0a6;
@@ -55,7 +55,7 @@
 }
 
 .f-b {
-    margin-top: 80rem;
+    margin-top: 64rem;
     display: flex;
     gap: 24rem;
     flex-direction: column;
@@ -80,7 +80,7 @@
 .socials a {
     flex-basis: 50%;
     padding-inline: 16rem;
-    font-size: $fs1;
+    font-size: 12rem;
     &:nth-child(2n - 1) {
         text-align: right;
         border-right: 1px solid black;
@@ -96,7 +96,7 @@
 }
 
 .cr {
-    font-size: $fs1;
+    font-size: 12rem;
     @media (--md) {
         width: 50%;
     }

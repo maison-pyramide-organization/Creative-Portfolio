@@ -11,12 +11,12 @@
     background-color: #121212;
     color: white;
     z-index: 999;
-    padding-inline: 20px;
-    padding-block: 70px 24px;
+    padding-inline: $p-i;
+    padding-block: 70rem 24rem;
 }
 
 .menu ul {
-    margin-top: 48px;
+    margin-top: 48rem;
 }
 
 .menu li {
@@ -29,21 +29,21 @@
 .menu ul a {
     display: block;
     font-size: $fs2;
-    padding-block: 24px;
+    padding-block: 24rem;
 }
 
 .menu button {
-    margin-top: 80px;
-    padding: 10px 24px;
+    margin-top: 80rem;
+    padding: 10rem 24rem;
     background-color: #cee0a6;
     width: 100%;
-    border-radius: 200px;
+    border-radius: 100rem;
     font-size: $fs1;
 }
 
 .menu_b {
     position: absolute;
-    bottom: 24px;
+    bottom: 24rem;
     width: 100%;
 }
 
@@ -51,11 +51,11 @@
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    row-gap: 8px;
+    row-gap: 8rem;
 }
 .social a {
     flex-basis: 50%;
-    padding-inline: 16px;
+    padding-inline: 16rem;
     font-size: $fs1;
     &:nth-child(2n - 1) {
         text-align: right;
