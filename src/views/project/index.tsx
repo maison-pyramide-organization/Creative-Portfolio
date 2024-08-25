@@ -22,6 +22,7 @@ const Project = () => {
                 <img src={thumbnail} alt={name} />
             </div>
 
+            {/* INFO */}
             <div className={s.info}>
                 {/* CLIENT */}
                 <div className={s["info_g"]}>
@@ -58,11 +59,13 @@ const Project = () => {
                 </div>
             </div>
 
+            {/* COLLAGE */}
             <div className={s.collage}>
                 {collage?.map((img, i) => (
                     <img src={img} alt={name} key={i} />
                 ))}
             </div>
+            {/* IMAGES */}
             <div className={s["images"]}>
                 {images.map((img, i) => (
                     <img src={img} alt={name} key={i} />

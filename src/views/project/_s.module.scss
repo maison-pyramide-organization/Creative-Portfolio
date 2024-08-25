@@ -1,7 +1,7 @@
 @use "@a/styles/base" as *;
 
 .p {
-    padding-inline: 20rem;
+    padding-inline: $p-i;
 }
 .p h1 {
     font-size: $fs4;
@@ -12,15 +12,19 @@
 .thumbnail {
     margin-top: 80rem;
     width: 100%;
+    @media (--md) {
+        margin-top: 100rem;
+    }
 }
 
 .info {
-    margin-top: 48rem;
+    margin-block: 48rem;
     display: flex;
     flex-direction: column;
     gap: 32rem;
     font-size: $fs2;
     @media (--md) {
+        margin-block: 64rem;
         flex-direction: row;
         gap: 20rem;
     }
@@ -52,6 +56,7 @@
 
 .info_item h3 {
     font-size: $fs2;
+    font-weight: 400;
     opacity: 0.7;
 }
 .info_text {
@@ -72,12 +77,12 @@
 }
 
 .collage {
-    margin-top: 48rem;
     display: grid;
     grid-template-columns: 100%;
-    gap: 20rem;
+    row-gap: 24rem;
     @media (--md) {
         grid-template-columns: repeat(4, 1fr);
+        gap: 20rem;
     }
 }
 
@@ -95,8 +100,11 @@
 }
 
 .images {
-    margin-top: 20rem;
+    margin-top: 24rem;
     display: flex;
     flex-direction: column;
-    gap: 20rem;
+    gap: 24rem;
+    @media (--md) {
+        gap: 20rem;
+    }
 }
