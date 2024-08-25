@@ -6,11 +6,10 @@ import { Service } from "./components/service";
 import VMob from "@a/images/v-mob.png";
 // @ts-ignore
 import MPCP from "@a/icons/mpcp-logo.svg?react";
-import { Swiper, SwiperSlide } from "swiper/react";
 import projects from "@/data/projects";
-import FeaturedProject from "./components/f-project";
 import "swiper/css";
 import { useLocation } from "react-router-dom";
+import ProjectsSlider from "./components/projects-slider";
 
 const Home = () => {
     let { hash } = useLocation();
@@ -27,7 +26,7 @@ const Home = () => {
         // getProjects().then((projects) => {
         //     console.log(projects);
         // });
-    }, []);
+    }, [hash]);
 
     return (
         <div className="p">
@@ -36,13 +35,7 @@ const Home = () => {
             </div>
 
             <section className={s["s-f-projects"]}>
-                <Swiper slidesPerView={"auto"} spaceBetween={24} centeredSlides={true} loop={true}>
-                    {projects.map((project, i) => (
-                        <SwiperSlide key={i} className={s["slide"]}>
-                            <FeaturedProject project={project} />
-                        </SwiperSlide>
-                    ))}
-                </Swiper>
+                <ProjectsSlider projects={projects} />
             </section>
 
             <section className={s["s-intro"]}>
@@ -53,9 +46,11 @@ const Home = () => {
             </section>
             <section id="services" className={s["s-services"]}>
                 <h2>SERVICES</h2>
-                {services.map((service) => (
-                    <Service service={service} key={service.index} />
-                ))}
+                <div>
+                    {services.map((service) => (
+                        <Service service={service} key={service.index} />
+                    ))}
+                </div>
             </section>
         </div>
     );

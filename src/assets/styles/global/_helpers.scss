@@ -1,15 +1,26 @@
 //
+:root {
+    --fs1: 12rem;
+    --fs2: 16rem;
+    --fs3: 20rem;
+    --fs4: 32rem;
+    --padding-x: 20rem;
+    @media (--md) {
+        --fs1: 16rem;
+        --fs2: 24rem;
+        --fs3: 32rem;
+        --fs4: 78rem;
+        --padding-x: 40rem;
+    }
+}
 .p-w {
-    padding-block: 80px;
+    padding-top: 80rem;
+    @media (--md) {
+        padding-top: 100rem;
+    }
 }
 .menu-opened {
     height: 100vh;
     height: 100dvh;
     overflow: hidden;
-}
-
-@media (--md) {
-    .p-w {
-        padding-block: 100px;
-    }
 }

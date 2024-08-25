@@ -1,31 +1,48 @@
-@use '@a/styles/base' as *;
+@use "@a/styles/base" as *;
 
 .proj {
     display: block;
-    width: 300px;
 }
-.proj img {
-    aspect-ratio: 3/4;
-    width: 100%;
-    object-fit: cover;
+.proj:hover .img-w {
+    width: 600rem;
 }
-
-:global(.swiper-slide-active) .proj div {
+.proj:hover .info {
     transition: opacity 0.3s linear;
     opacity: 1;
 }
 
-.proj div {
+.img-w {
+    width: 240rem;
+    aspect-ratio: 3/4;
+    transition: all 0.4s ease-in-out;
+    @media (--md) {
+        width: 300rem;
+        height: 400rem;
+    }
+}
+.img-w img {
+    height: 100%;
+}
+
+:global(.swiper-slide-active) .info {
+    opacity: 1;
+    @media (--md) {
+        opacity: 0;
+    }
+}
+
+.info {
     opacity: 0;
     margin-top: 16px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    h3 {
-        font-size: $fs2;
-        text-transform: capitalize;
-    }
-    span {
-        font-size: $fs1;
-    }
+    transition: opacity 0.3s linear;
+}
+.info h3 {
+    font-size: $fs2;
+    text-transform: capitalize;
+}
+.info span {
+    font-size: $fs1;
 }

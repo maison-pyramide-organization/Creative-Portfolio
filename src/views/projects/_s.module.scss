@@ -1,7 +1,7 @@
 @use "@a/styles/base" as *;
 
 .p {
-    padding-inline: 20px;
+    padding-inline: $p-i;
 }
 
 .p h1 {
@@ -9,18 +9,13 @@
 }
 
 .projects {
-    margin-top: 80px;
+    margin-top: 80rem;
     display: grid;
     grid-template-columns: 1fr;
-    gap: 40px;
-}
-
-@media (--md) {
-    .p h1 {
-        font-size: 44px;
-    }
-    .projects {
+    gap: 40rem;
+    @media (--md) {
+        margin-top: 100rem;
         grid-template-columns: 1fr 1fr;
-        row-gap: 80px;
+        row-gap: 80rem;
     }
 }

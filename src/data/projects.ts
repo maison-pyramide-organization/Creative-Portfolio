@@ -52,6 +52,17 @@ const projects: project[] = [
         collage: [p1_1, p1_2, p1_3, p1_4],
         images: [p1, p2],
     },
+    {
+        thumbnail: p4,
+        name: "quinn hop",
+        slug: "quinn-hop",
+        year: "2023",
+        services: ["visual identity"],
+        intro: "Lorem ipsum dolor sit amet consectetur. Mi hendrerit justo rhoncus cursus leo integer. Eros ac cursus lacus nec a pellentesque. Volutpat cras rhoncus adipiscing utalyd  pellentesque sed. Donec lectus nibh suspendisse nun.",
+        client: "Emaar",
+        collage: [p1_1, p1_2, p1_3, p1_4],
+        images: [p1, p2],
+    },
 ];
 
 export default projects;

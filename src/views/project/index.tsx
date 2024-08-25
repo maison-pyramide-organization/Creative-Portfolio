@@ -24,31 +24,37 @@ const Project = () => {
 
             <div className={s.info}>
                 {/* CLIENT */}
-                <div className={s.client}>
-                    <h3>CLIENT</h3>
-                    <p>{client}</p>
-                </div>
+                <div className={s["info_g"]}>
+                    <div className={s["info_item"]}>
+                        <h3>CLIENT</h3>
+                        <p className={s["info_text"]}>{client}</p>
+                    </div>
 
-                {/* YEAR */}
-                <div className={s.year}>
-                    <h3>YEAR</h3>
-                    <p>{year}</p>
-                </div>
+                    {/* YEAR */}
+                    <div className={s["info_item"]}>
+                        <h3>YEAR</h3>
+                        <p className={s["info_text"]}>{year}</p>
+                    </div>
 
-                {/* SERVICES */}
-                <div className={s.services}>
-                    <h3>SERVICES</h3>
-                    <ul>
-                        {services.map((service) => (
-                            <li key={service}>{service}</li>
-                        ))}
-                    </ul>
+                    {/* SERVICES */}
+                    <div className={s["info_item"]}>
+                        <h3>SERVICES</h3>
+                        <ul>
+                            {services.map((service) => (
+                                <li key={service} className={s["info_text"]}>
+                                    {service}
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
                 </div>
 
                 {/* INTRO */}
-                <div className={s.intro}>
-                    <h3>INTRO</h3>
-                    <p>{intro}</p>
+                <div className={s["intro"]}>
+                    <div className={s["info_item"]}>
+                        <h3>INTRO</h3>
+                        <p className={s["info_text"]}>{intro}</p>
+                    </div>
                 </div>
             </div>
 
@@ -58,8 +64,8 @@ const Project = () => {
                 ))}
             </div>
             <div className={s["images"]}>
-                {images.map((image) => (
-                    <img src={image} alt={name} />
+                {images.map((img, i) => (
+                    <img src={img} alt={name} key={i} />
                 ))}
             </div>
         </div>

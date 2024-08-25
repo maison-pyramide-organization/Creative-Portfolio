@@ -9,8 +9,10 @@ const FeaturedProject = (props: Iprops) => {
     const { thumbnail, name, year, slug } = props.project;
     return (
         <Link to={`/projects/${slug}`} className={s["proj"]}>
-            <img src={thumbnail} alt="" />
-            <div>
+            <div className={s["img-w"]}>
+                <img src={thumbnail} alt="" />
+            </div>
+            <div className={s['info']}>
                 <h3>{name}</h3>
                 <span>({year})</span>
             </div>

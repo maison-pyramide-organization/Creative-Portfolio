@@ -24,8 +24,16 @@
 }
 html {
     // font-size: 62.5%;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     font-size: calc(100vw / 375);
+    @media (--md) {
+        font-size: calc(100vw / 1440);
+    }
 }
+
 body {
     overscroll-behavior: none;
 }
@@ -49,6 +57,7 @@ button {
     display: block;
     border: none;
     font-weight: 500;
+    cursor: pointer;
 }
 img,
 video {

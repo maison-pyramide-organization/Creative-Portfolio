@@ -2,24 +2,36 @@
 
 //
 .s-contact {
+    margin-top: 120rem;
     position: relative;
-    padding-block: 80px 160px;
+    padding-block: 80rem 160rem;
     color: white;
     background-color: black;
+    @media (--md) {
+        margin-top: 140rem;
+        padding-block: 120rem 200rem;
+    }
 }
 .s-contact h2 {
-    padding-inline: 20px;
+    padding-inline: 20rem;
     font-size: $fs3;
     text-align: center;
+    @media (--md) {
+        margin-inline: auto;
+        max-width: 1000rem;
+    }
 }
 
 .s-contact button {
     font-size: $fs1;
-    border-radius: 100px;
-    background-color: $mp-green;
-    padding: 10px 24px;
+    border-radius: 100rem;
+    background-color: $green;
+    padding: 10rem 24rem;
     margin-inline: auto;
-    margin-top: 40px;
+    margin-top: 48rem;
+    @media (--md) {
+        margin-top: 46rem;
+    }
 }
 
 .pyramide {
@@ -27,7 +39,7 @@
     bottom: -1px;
     left: 0;
     right: 0;
-    height: 80px;
+    height: 80rem;
     background-color: white;
     clip-path: polygon(80% 0, 0% 100%, 100% 100%);
 }
