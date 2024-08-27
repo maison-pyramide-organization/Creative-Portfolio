@@ -1,75 +1,85 @@
 @use "@a/styles/base" as *;
 
 .logo {
-    width: 260rem;
-    margin-inline: auto;
-    @media (--md) {
-        width: 500rem;
-    }
+  width: 260rem;
+  margin-inline: auto;
+  @media (--md) {
+    width: 500rem;
+  }
 }
-//
 
+//
 .s-f-projects {
-    margin-top: 80rem;
-    padding-inline: $p-i;
-    @media (--md) {
-        margin-top: 100rem;
-    }
+  margin-top: 80rem;
+  padding-inline: $p-i;
+  @media (--md) {
+    margin-top: 100rem;
+  }
 }
 
 //
 .s-intro {
-    margin-top: 120rem;
-    padding-inline: $p-i;
-    @media (--md) {
-        margin-top: 140rem;
-    }
+  margin-top: 120rem;
+  padding-inline: $p-i;
+  @media (--md) {
+    margin-top: 140rem;
+  }
+}
 
-    h1 {
-        font-size: $fs3;
-        text-align: center;
-        line-height: 120%;
-        letter-spacing: -0.01em;
-        @media (--md) {
-            margin-inline: auto;
-            max-width: 1030rem;
-        }
-    }
-    div {
-        margin-top: 48rem;
-        @media (--md) {
-            margin-top: 80rem;
-        }
-    }
-    img {
-        width: 100%;
-        object-fit: cover;
-        border-radius: 8px;
-    }
+.s-intro h1 {
+  font-size: $fs3;
+  text-align: center;
+  line-height: 120%;
+  letter-spacing: -0.01em;
+  @media (--md) {
+    margin-inline: auto;
+    max-width: 1030rem;
+  }
+}
+
+.s-intro :global(.line) {
+  overflow: hidden;
+}
+
+.s-intro :global(#vid) {
+  width: 50%;
+  margin-inline: auto;
+}
+
+.s-intro > div {
+  margin-top: 48rem;
+  @media (--md) {
+    margin-top: 80rem;
+  }
+}
+.s-intro img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 8px;
 }
 
 //
 .s-services {
-    margin-top: 80rem;
-    padding-inline: $p-i;
-    padding-top: 40rem;
-    display: flex;
-    flex-direction: column;
-    gap: 24rem;
-    @media (--md) {
-        padding-top: 60rem;
-        flex-direction: row;
-        gap: 20rem;
-    }
+  margin-top: 80rem;
+  padding-inline: $p-i;
+  padding-top: 40rem;
+  display: flex;
+  flex-direction: column;
+  gap: 24rem;
+  @media (--md) {
+    padding-top: 60rem;
+    flex-direction: row;
+    gap: 20rem;
+  }
 }
 .s-services h2 {
-    font-size: $fs3;
-    @media (--md) {
-        width: 25%;
-    }
+  font-size: $fs3;
+  @media (--md) {
+    width: 25%;
+  }
 }
 .s-services > div {
-    @media (--md) {
-        width: 75%;
-    }
+  @media (--md) {
+    width: 75%;
+  }
 }

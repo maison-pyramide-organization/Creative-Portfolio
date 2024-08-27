@@ -8,16 +8,16 @@ import Grid from "@c/grid/index.tsx";
 import ViewportProvider from "./context/viewport-context.tsx";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
-    <>
-        <React.StrictMode>
-            <Grid />
-            <ReactLenis root>
-                <BrowserRouter>
-                    <ViewportProvider>
-                        <App />
-                    </ViewportProvider>
-                </BrowserRouter>
-            </ReactLenis>
-        </React.StrictMode>
-    </>
+  <>
+    {/* <React.StrictMode> */}
+    <Grid />
+    <ReactLenis root>
+      <BrowserRouter>
+        <ViewportProvider>
+          <App />
+        </ViewportProvider>
+      </BrowserRouter>
+    </ReactLenis>
+    {/* </React.StrictMode> */}
+  </>
 );

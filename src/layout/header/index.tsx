@@ -4,41 +4,45 @@ import { Link, useLocation } from "react-router-dom";
 import Menu from "../menu";
 
 const Header = () => {
-    const { pathname, hash } = useLocation();
-    const [isMenuOpened, setIsMenuOpened] = useState(false);
+  const { pathname, hash } = useLocation();
+  const [isMenuOpened, setIsMenuOpened] = useState(false);
 
-    useEffect(() => {
-        setIsMenuOpened(false);
-        document.getElementById("root")?.classList.remove("menu-opened");
-    }, [pathname, hash]);
+  useEffect(() => {
+    setIsMenuOpened(false);
+    document.getElementById("root")?.classList.remove("menu-opened");
+  }, [pathname, hash]);
 
-    const toggleMenu = () => {
-        setIsMenuOpened((prev) => !prev);
-        document.getElementById("root")?.classList.toggle("menu-opened");
-    };
+  const toggleMenu = () => {
+    setIsMenuOpened((prev) => !prev);
+    document.getElementById("root")?.classList.toggle("menu-opened");
+  };
 
-    return (
-        <>
-            <header className={s["h"]}>
-                <div className={s.logo}>
-                    <span>MAISON PYRAMIDE</span>
-                </div>
-                <nav>
-                    <Link to="/">HOME</Link>
-                    <Link to="/projects">PROJECTS</Link>
-                    <Link to="/#services">SERVICES</Link>
-                </nav>
+  return (
+    <>
+      <header className={s["h"]}>
+        <div className={s.logo}>
+          <span>MAISON PYRAMIDE</span>
+        </div>
+        <nav>
+          <Link to="/">HOME</Link>
+          <Link to="/projects">PROJECTS</Link>
+          <Link to="/#services">SERVICES</Link>
+        </nav>
 
-                <button className={s["contact"]}>CONTACT</button>
+        <button className="btn">
+          <div>
+            <span>CONTACT</span>
+          </div>
+        </button>
 
-                <div className={s["menu"]} onClick={toggleMenu}>
-                    {isMenuOpened ? "CLOSE" : "MENU"}
-                </div>
-            </header>
+        <div className={s["menu"]} onClick={toggleMenu}>
+          {isMenuOpened ? "CLOSE" : "MENU"}
+        </div>
+      </header>
 
-            {isMenuOpened && <Menu />}
-        </>
-    );
+      {isMenuOpened && <Menu />}
+    </>
+  );
 };
 
 export default Header;

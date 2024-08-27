@@ -10,6 +10,7 @@ import projects from "@/data/projects";
 import "swiper/css";
 import { useLocation } from "react-router-dom";
 import ProjectsSlider from "./components/projects-slider";
+import animate from "./_animation";
 
 const Home = () => {
     let { hash } = useLocation();
@@ -28,6 +29,11 @@ const Home = () => {
         // });
     }, [hash]);
 
+    useEffect(()=>{
+        animate()
+
+    },[])
+
     return (
         <div className="p">
             <div className={s["logo"]}>
@@ -38,9 +44,9 @@ const Home = () => {
                 <ProjectsSlider projects={projects} />
             </section>
 
-            <section className={s["s-intro"]}>
+            <section id="intro" className={s["s-intro"]}>
                 <h1>WE HELP BUILDING EARLY-STAGE COMPANIES AND ACCELERATING LATER STAGE BRANDS.</h1>
-                <div>
+                <div id="vid">
                     <img src={VMob} alt="" />
                 </div>
             </section>

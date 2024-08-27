@@ -1,26 +1,56 @@
 //
 :root {
-    --fs1: 12rem;
-    --fs2: 16rem;
-    --fs3: 20rem;
-    --fs4: 32rem;
-    --padding-x: 20rem;
-    @media (--md) {
-        --fs1: 16rem;
-        --fs2: 24rem;
-        --fs3: 32rem;
-        --fs4: 78rem;
-        --padding-x: 40rem;
-    }
+  --fs1: 12rem;
+  --fs2: 16rem;
+  --fs3: 20rem;
+  --fs4: 32rem;
+  --padding-x: 20rem;
+  @media (--md) {
+    --fs1: 16rem;
+    --fs2: 24rem;
+    --fs3: 32rem;
+    --fs4: 78rem;
+    --padding-x: 40rem;
+  }
 }
 .p-w {
-    padding-top: 80rem;
-    @media (--md) {
-        padding-top: 100rem;
-    }
+  padding-top: 80rem;
+  @media (--md) {
+    padding-top: 100rem;
+  }
 }
 .menu-opened {
-    height: 100vh;
-    height: 100dvh;
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+}
+
+button {
+  background-color: $green;
+  @media (cursor: fine) {
+    background-color: transparent;
+  }
+}
+
+.btn {
+    padding: 8rem 24rem;
+    border: 1px solid black;
+    border-radius: 100rem;
+  &:hover {
+    background-color: $green;
+  }
+  &:hover span {
+    transform: translateY(-100%);
+  }
+  div {
     overflow: hidden;
+  }
+  span {
+    display: block;
+    font-size: 12rem;
+    line-height: 100%;
+    font-weight: 500;
+    text-shadow: 0px 1em 0px black;
+    transition: transform 0.2s ease-out;
+  }
 }
