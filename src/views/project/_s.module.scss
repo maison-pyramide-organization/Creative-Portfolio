@@ -16,6 +16,9 @@
     margin-top: 100rem;
   }
 }
+.thumbnail img {
+  aspect-ratio: 16/9;
+}
 
 .info {
   margin-block: 48rem;
@@ -107,4 +110,8 @@
   @media (--md) {
     gap: 20rem;
   }
+}
+
+.images img {
+  aspect-ratio: 16/9;
 }

@@ -13,14 +13,15 @@ const animate = () => {
     stagger: { amount: 0.6 },
   });
 
-  gsap.to("#vid", {
+  //
+
+  gsap.from("#vid", {
     scrollTrigger: {
       trigger: "#vid",
       scrub: 1,
-      // start: "top center",
-      // pin: true,
+      start: "top 90%",
     },
-    width: "100%",
+    width: "50%",
   });
 };
 

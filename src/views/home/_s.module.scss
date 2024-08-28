@@ -41,21 +41,18 @@
   overflow: hidden;
 }
 
-.s-intro :global(#vid) {
-  width: 50%;
-  margin-inline: auto;
-}
-
-.s-intro > div {
+.vid_w {
   margin-top: 48rem;
+  aspect-ratio: 16/9;
   @media (--md) {
     margin-top: 80rem;
   }
 }
+
 .s-intro img {
-  width: 100%;
-  object-fit: cover;
-  border-radius: 8px;
+  margin-inline: auto;
+  aspect-ratio: 16/9;
+  border-radius: 8rem;
 }
 
 //

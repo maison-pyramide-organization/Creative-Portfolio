@@ -13,12 +13,28 @@
     --padding-x: 40rem;
   }
 }
+
 .p-w {
   padding-top: 80rem;
+  background-color: $ofw;
   @media (--md) {
     padding-top: 100rem;
   }
 }
+
+.f_w {
+  position: relative;
+  z-index: -9;
+  margin-top: -100vh;
+}
+.s {
+  height: 100vh;
+}
+footer {
+  position: sticky;
+  bottom: 0;
+}
+
 .menu-opened {
   height: 100vh;
   height: 100dvh;
@@ -33,9 +49,9 @@ button {
 }
 
 .btn {
-    padding: 8rem 24rem;
-    border: 1px solid black;
-    border-radius: 100rem;
+  padding: 8rem 24rem;
+  border: 1px solid black;
+  border-radius: 100rem;
   &:hover {
     background-color: $green;
   }

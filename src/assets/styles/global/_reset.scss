@@ -1,73 +1,75 @@
 /* FONTS */
 @font-face {
-    font-family: "Suisse";
-    font-style: normal;
-    font-weight: 400;
-    src: url("../../fonts/SuisseIntl-Regular.otf") format("opentype");
+  font-family: "Suisse";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../../fonts/SuisseIntl-Regular.otf") format("opentype");
 }
 
 @font-face {
-    font-family: "Suisse";
-    font-style: normal;
-    font-weight: 500;
-    src: url("../../fonts//SuisseIntl-Medium.otf") format("opentype");
+  font-family: "Suisse";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../../fonts//SuisseIntl-Medium.otf") format("opentype");
 }
 
 /*
 * THIS FILES IS FOR RESETTING SOME OF THE DEFAULTS STYLES
 */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "suisse", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "suisse", sans-serif;
 }
 html {
-    // font-size: 62.5%;
-    -webkit-text-size-adjust: 100%;
-    text-size-adjust: 100%;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-size: calc(100vw / 375);
-    @media (--md) {
-        font-size: calc(100vw / 1440);
-    }
+  // font-size: 62.5%;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: calc(100vw / 375);
+  @media (--md) {
+    font-size: calc(100vw / 1440);
+  }
 }
 
 body {
-    overscroll-behavior: none;
+  overscroll-behavior: none;
+  background-color: $ofw;
 }
 h1,
 h2,
 h3,
 h4,
 h5 {
-    font-weight: 500;
+  font-weight: 500;
 }
 a {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
 }
 li {
-    list-style: none;
+  list-style: none;
 }
 button {
-    outline: none;
-    background-color: transparent;
-    display: block;
-    border: none;
-    font-weight: 500;
-    cursor: pointer;
+  outline: none;
+  background-color: transparent;
+  display: block;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
 }
 img,
 video {
-    background-color: #ededed;
-    object-fit: cover;
+  background-color: #ededed;
+  object-fit: cover;
 }
 
 img,
 svg {
-    display: block;
-    width: 100%;
-    height: auto;
+  display: block;
+  width: 100%;
+  height: auto;
 }
