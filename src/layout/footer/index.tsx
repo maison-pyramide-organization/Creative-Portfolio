@@ -16,37 +16,29 @@ const Footer = () => {
         </ul>
         <div className={s["contact"]}>
           <h4>WANT TO GET IN TOUCH WITH US ABOUT OUR SERVICES?</h4>
-          <button className="btn">
-            <div>
-              <span>GET IN CONTACT</span>
-            </div>
-          </button>
+          <button className="btn">GET IN CONTACT</button>
         </div>
 
         <div className={s["positions"]}>
           <h4>WANT TO CHECK OUT OUR OPEN JOB POSITIONS?</h4>
 
-          <button className="btn">
-            <div>
-              <span>APPLY HERE</span>
-            </div>
-          </button>
+          <button className="btn">APPLY HERE</button>
         </div>
       </div>
 
       <div className={s["f-b"]}>
         <div className={s["socials"]}>
-          <a href={socials.ig} target="_blank">
-            INSTAGRAM
+          <a className="link" href={socials.ig} target="_blank">
+            <div>INSTAGRAM</div>
           </a>
-          <a href={socials.ig} target="_blank">
-            LINKEDIN
+          <a className="linkk" href={socials.ig} target="_blank">
+            <div>LINKEDIN</div>
           </a>
-          <a href={socials.ig} target="_blank">
-            E-SHOWROOM
+          <a className="linkk" href={socials.ig} target="_blank">
+            <div>E-SHOWROOM</div>
           </a>
-          <a href={socials.ig} target="_blank">
-            EGO & EAST
+          <a className="linkk" href={socials.ig} target="_blank">
+            <div>EGO & EAST</div>
           </a>
         </div>
 

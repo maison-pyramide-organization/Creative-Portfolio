@@ -17,6 +17,8 @@
 .p-w {
   padding-top: 80rem;
   background-color: $ofw;
+  position: relative;
+  z-index: 2;
   @media (--md) {
     padding-top: 100rem;
   }
@@ -24,7 +26,7 @@
 
 .f_w {
   position: relative;
-  z-index: -9;
+  z-index: 1;
   margin-top: -100vh;
 }
 .s {
@@ -48,25 +50,33 @@ button {
   }
 }
 
+*:has(.link) {
+  overflow-x: hidden;
+}
+
+.link > div {
+  position: relative;
+}
+.link > div:after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  background-color: black;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  // left: -100%;
+  // bottom: -8px;
+}
+
 .btn {
   padding: 8rem 24rem;
   border: 1px solid black;
   border-radius: 100rem;
+  font-size: 12rem;
+  line-height: 100%;
+  font-weight: 500;
   &:hover {
     background-color: $green;
-  }
-  &:hover span {
-    transform: translateY(-100%);
-  }
-  div {
-    overflow: hidden;
-  }
-  span {
-    display: block;
-    font-size: 12rem;
-    line-height: 100%;
-    font-weight: 500;
-    text-shadow: 0px 1em 0px black;
-    transition: transform 0.2s ease-out;
   }
 }

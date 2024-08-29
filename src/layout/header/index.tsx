@@ -29,11 +29,7 @@ const Header = () => {
           <Link to="/#services">SERVICES</Link>
         </nav>
 
-        <button className="btn">
-          <div>
-            <span>CONTACT</span>
-          </div>
-        </button>
+        <button className="btn">CONTACT</button>
 
         <div className={s["menu"]} onClick={toggleMenu}>
           {isMenuOpened ? "CLOSE" : "MENU"}

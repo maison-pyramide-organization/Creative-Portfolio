@@ -1,34 +1,70 @@
 @use "@a/styles/base" as *;
 //
 .service {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 16px;
-    border-bottom: 1px solid black;
-    padding-block: 24px;
-    &:first-of-type {
-        border-top: 1px solid black;
-    }
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  border-bottom: 1px solid black;
+  padding-block: 24px;
+  &:first-of-type {
+    border-top: 1px solid black;
+  }
+
+  @media (--md) {
+    grid-template-columns: repeat(9, 1fr);
+  }
 }
 
 .service > div {
-    display: flex;
-    gap: 8px;
-    grid-area: 1/1/1/3;
-    font-size: $fs2;
+  display: flex;
+  gap: 8rem;
+  grid-area: 1/1/1/3;
+  font-size: $fs2;
+  @media (--md) {
+    grid-column: 1/6;
+    display: grid;
+    gap: 20rem;
+    grid-template-columns: repeat(5, 1fr);
+  }
 }
 
-.service h3 {
-    font-size: $fs2;
+.title_w {
+  font-size: $fs2;
+  display: flex;
+  @media (--md) {
+    grid-column: 2/6;
+  }
+}
+.title_w h3 {
+  @media (--md) {
+    margin-left: 16rem;
+  }
+}
+
+.service:hover .img-c {
+  width: 200rem;
+}
+
+.img-c {
+  width: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  transition: width 0.5s cubic-bezier(0.45, 0, 0.55, 1);
+  @media (--md) {
+  }
 }
 
 .service ul {
-    grid-area: 1/3/1/5;
-    display: flex;
-    flex-direction: column;
-    gap: 8rem;
+  grid-area: 1/3/1/5;
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+  @media (--md) {
+    grid-column: 7/10;
+  }
 }
 
 .service li {
-    font-size: $fs1;
+  font-size: $fs1;
 }

@@ -26,6 +26,7 @@ const services = [
       "Creative Development",
       "CMS Implementation",
       "E-Commerce Integration",
+      "",
     ],
   },
 ];
