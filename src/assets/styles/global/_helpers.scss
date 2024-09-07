@@ -1,82 +1,90 @@
 //
 :root {
-  --fs1: 12rem;
-  --fs2: 16rem;
-  --fs3: 20rem;
-  --fs4: 32rem;
-  --padding-x: 20rem;
-  @media (--md) {
-    --fs1: 16rem;
-    --fs2: 24rem;
-    --fs3: 32rem;
-    --fs4: 78rem;
-    --padding-x: 40rem;
-  }
+    --fs1: 12rem;
+    --fs2: 16rem;
+    --fs3: 20rem;
+    --fs4: 32rem;
+    --padding-x: 20rem;
+    @media (--md) {
+        --fs1: 16rem;
+        --fs2: 24rem;
+        --fs3: 32rem;
+        --fs4: 78rem;
+        --padding-x: 40rem;
+    }
 }
 
 .p-w {
-  padding-top: 80rem;
-  background-color: $ofw;
-  position: relative;
-  z-index: 2;
-  @media (--md) {
-    padding-top: 100rem;
-  }
+    padding-top: 80rem;
+    background-color: $ofw;
+    position: relative;
+    z-index: 2;
+    @media (--md) {
+        padding-top: 100rem;
+    }
 }
 
 .f_w {
-  position: relative;
-  z-index: 1;
-  margin-top: -100vh;
+    position: relative;
+    z-index: 1;
+    margin-top: -100vh;
 }
 .s {
-  height: 100vh;
+    height: 100vh;
 }
 footer {
-  position: sticky;
-  bottom: 0;
+    position: sticky;
+    bottom: 0;
 }
 
 .menu-opened {
-  height: 100vh;
-  height: 100dvh;
-  overflow: hidden;
+    height: 100vh;
+    height: 100dvh;
+    overflow: hidden;
 }
 
 button {
-  background-color: $green;
-  @media (cursor: fine) {
-    background-color: transparent;
-  }
+    background-color: $green;
+    @media (cursor: fine) {
+        background-color: transparent;
+    }
 }
 
-*:has(.link) {
-  overflow-x: hidden;
+.link {
+    font-size: inherit;
 }
 
 .link > div {
-  position: relative;
-}
-.link > div:after {
-  content: "";
-  position: absolute;
-  height: 1px;
-  background-color: black;
-  width: 100%;
-  left: 0;
-  bottom: 0;
-  // left: -100%;
-  // bottom: -8px;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 2px;
 }
 
+.link > div:after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    background-color: black;
+    width: 100%;
+    left: -102%;
+    bottom: 1px;
+    transition: all 0.3s ease-out;
+}
+
+.link:hover div:after {
+    left: 0;
+}
+
+// BUTTON
 .btn {
-  padding: 8rem 24rem;
-  border: 1px solid black;
-  border-radius: 100rem;
-  font-size: 12rem;
-  line-height: 100%;
-  font-weight: 500;
-  &:hover {
-    background-color: $green;
-  }
+    padding: 8rem 24rem;
+    border: 1px solid black;
+    border-radius: 100rem;
+    font-size: 12rem;
+    line-height: 100%;
+    font-weight: 500;
+    &:hover {
+        border-color: $green;
+        background-color: $green;
+    }
 }
