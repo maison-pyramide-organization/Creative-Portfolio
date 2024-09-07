@@ -53,15 +53,17 @@
 }
 
 .service ul {
-    grid-area: 1/3/1/5;
-    display: flex;
-    flex-direction: column;
-    gap: 8rem;
-    @media (--md) {
-        grid-column: 7/10;
-    }
+  grid-area: 1/3/1/5;
+  display: flex;
+  flex-direction: column;
+  gap: 16rem;
+  @media (--md) {
+    grid-column: 7/10;
+  }
 }
 
 .service li {
-    font-size: $fs1;
+  font-size: $fs1;
+  line-height: 100%;
+  height: 16rem;
 }
