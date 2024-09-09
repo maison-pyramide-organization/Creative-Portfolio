@@ -5,7 +5,7 @@ import SplitType from "split-type";
 gsap.registerPlugin(ScrollTrigger);
 
 const animate = () => {
-  const text = new SplitType("#intro h1", { types: "words,lines" });
+  new SplitType("#intro h1", { types: "words,lines" });
 
   gsap.from("#intro .word", {
     y: "100%",
