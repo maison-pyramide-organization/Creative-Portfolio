@@ -10,7 +10,7 @@ const FeaturedProject = (props: Iprops) => {
     return (
         <Link to={`/projects/${slug}`} className={s["proj"]}>
             <div className={s["img-w"]}>
-                <img src={thumbnail} alt="" />
+                <img src={thumbnail.fields.file.url} alt="" />
             </div>
             <div className={s['info']}>
                 <h3>{name}</h3>
