@@ -3,3 +3,34 @@
     // width: unset;
     flex-shrink: 1;
 }
+
+.n {
+    margin-top: 24rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.n a {
+    font-size: 14rem;
+    text-transform: uppercase;
+}
+
+.n_ctrls {
+    display: flex;
+    gap: 24rem;
+}
+
+.n_ctrls button {
+    border: 1px solid black;
+    padding: 6rem;
+    width: 32rem;
+    aspect-ratio: 1;
+    border-radius: 100%;
+}
+
+.n_ctrls button:nth-child(1) svg {
+    transform: rotate(90deg);
+}
+.n_ctrls button:nth-child(2) svg {
+    transform: rotate(-90deg);
+}

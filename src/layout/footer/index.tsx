@@ -31,13 +31,13 @@ const Footer = () => {
                     <a className="link" href={socials.ig} target="_blank">
                         <div>INSTAGRAM</div>
                     </a>
-                    <a className="link" href={socials.ig} target="_blank">
+                    <a className="link" href={socials.linkedin} target="_blank">
                         <div>LINKEDIN</div>
                     </a>
-                    <a className="link" href={socials.ig} target="_blank">
+                    <a className="link" href={socials.showroom} target="_blank">
                         <div>E-SHOWROOM</div>
                     </a>
-                    <a className="link" href={socials.ig} target="_blank">
+                    <a className="link" href={socials.egoandeast} target="_blank">
                         <div>EGO & EAST</div>
                     </a>
                 </div>
